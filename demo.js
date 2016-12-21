@@ -88,9 +88,6 @@ loader.load('./' + sf2).then(synth => {
     })
     synth.setMasterVolume(volinput.valueAsNumber * 16383)
 
-    // loadMidi('../../pal_08.mid')
-    // loadMidi('../../Palhero.net-pal-dos-midi/Music_01.mid')
-
     var listnames = ['maoudamashii', 'th08', 'pal', 'pal98']
     function initList() {
       var select = document.createElement('select')
@@ -142,7 +139,7 @@ loader.load('./' + sf2).then(synth => {
           var id = select.value
           player.stop()
           // loadMidi('../../Palhero.net-pal-dos-midi/Music_' + id + '.mid')
-          var path = '../../' + song_path + song_list[id]
+          var path = './' + song_path + song_list[id]
           loadMidi(path)
         }
 
